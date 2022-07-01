@@ -1,8 +1,10 @@
 <?php 
 
 
+$name = "jox"
+$myFunc = function(){
+global $name;
+  echo "salom".$name;
 
-$a=["jox","hakim","ali"];
-
-sort($a);
-print_r($a);
+}
+$myFunc("jox");
