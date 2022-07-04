@@ -21,17 +21,35 @@
 // }
 
 // masala 3
-$son = -99;
-if ($son>0) {
-  $son++;
-  echo $son;
+// $son = -99;
+// if ($son>0) {
+//   $son++;
+//   echo $son;
+// }
+// elseif ($son<0) {
+// $son2=$son-2;
+// echo $son2;
+// }
+// elseif ($son==0) {
+//   $son=10;
+//   echo $son;
+// }
+
+//masala 4
+
+$son1 = 9;
+$son2=8;
+$son3 = 0;
+if ($son1>0 && $son2<0 && $son3<0 || $son1<0 && $son2>0 && $son3<0 ||  $son1<0 && $son2<0 && $son3>0   ) {
+echo "bitta musbat son bor";
 }
-elseif ($son<0) {
-$son2=$son-2;
-echo $son2;
+elseif ( $son1>0 && $son2>0 && $son3<0  ||  $son1<0 && $son2>0 && $son3>0  ||   $son1>0 && $son2<0 && $son3>0 ) {
+echo "ikkita musbat son bor";
 }
-elseif ($son==0) {
-  $son=10;
-  echo $son;
+elseif ( $son1>0 && $son2>0 && $son3>0 ) {
+  echo "hammasi musbat sonlar";
+}
+else{
+  echo "musbat son yuq "; 
 }
 ?>
