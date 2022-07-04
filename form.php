@@ -8,9 +8,9 @@
 </head>
 <body>
   <?php 
-  echo $_GET['name'],$_GET['email'];
+  echo $_POST['name'],$_POST['email'];
   ?>
-  <form action="form.php">
+  <form action="form.php" method="post">
     <input type="text" name="name">
     <input type="email" name="email" id="">
     <button type="submit" name="submit">Yuborish</button>
