@@ -1,5 +1,9 @@
 <?php 
-
+$num="";
+$operator="";
+$result="";
+$cooke_name="";
+$cooke_value="";
 ?>
 <html>
   <head>
