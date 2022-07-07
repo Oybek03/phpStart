@@ -6,7 +6,18 @@ $cooke_name1="num";
 $cooke_value1="";
 $cooke_name2="op";
 $cooke_value2="";
+if (isset($_POST['display'])) {
+  $num = $_POST['display'];
+}else{
+  $num="";
+}
 
+if (isset($_POST[''])) {
+  $num = $_POST['display'] . $_POST['submit'];
+}
+else{
+  $num="";
+}
 ?>
 <html>
   <head>
@@ -17,7 +28,7 @@ $cooke_value2="";
 
       <table border="1">
         <tr>
-          <td colspan="4"><input type="text" name="display"></td>
+          <td colspan="4"><input type="text" name="display" <?php echo $result ?>  ></td>
         </tr>
         <tr>
   <td><input type="submit" name="submit" value="7"></td>
