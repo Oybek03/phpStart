@@ -12,10 +12,17 @@ if (isset($_POST['display'])) {
   $num="";
 }
 
-if (isset($_POST[''])) {
+if (isset($_POST['submit'])) {
   $num = $_POST['display'] . $_POST['submit'];
 }
 else{
+  $num="";
+}
+if (isset($_POST[''])) {
+  $cooke_value1=$_POST['display'];
+  setcookie($cooke_name1,$cooke_value1,time()+(86400*30),"/");
+  $cooke_value2=$_POST['op'];
+  setcookie($cooke_name2,$cooke_value2,time()+(86400*30),"/");
   $num="";
 }
 ?>
@@ -24,11 +31,12 @@ else{
     <title>Calculator</title>
   </head>
   <body>
-    <form action="#" method="post">
+    <center>
+    <form action="" method="post">
 
       <table border="1">
         <tr>
-          <td colspan="4"><input type="text" name="display" <?php echo $result ?>  ></td>
+          <td colspan="4"><input type="text" name="display" value=<?php echo $num; ?>></td>
         </tr>
         <tr>
   <td><input type="submit" name="submit" value="7"></td>
@@ -59,5 +67,6 @@ else{
 </tr>
 </table>
  </form>
+ </center>
 </body>
 </html>
