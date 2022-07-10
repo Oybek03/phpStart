@@ -25,6 +25,24 @@ if (isset($_POST[''])) {
   setcookie($cooke_name2,$cooke_value2,time()+(86400*30),"/");
   $num="";
 }
+if (isset($_POST['equals'])) {
+  $num=$_POST['display'];
+ switch ($_COOKIE['op']) {
+  case '+':
+    $result=$num+$_COOKIE['num'];
+    break;
+  case '/':
+    $result=$num/$_COOKIE['num'];
+    break;
+  case '-':
+    $result=$num-$_COOKIE['num'];
+    break;
+  case 'X':
+     $result=$num*$_COOKIE['num'];
+     break;
+}
+
+}
 ?>
 <html>
   <head>
