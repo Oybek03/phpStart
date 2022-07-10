@@ -27,20 +27,21 @@ if (isset($_POST[''])) {
 }
 if (isset($_POST['equals'])) {
   $num=$_POST['display'];
- switch ($_COOKIE['op']) {
-  case '+':
-    $result=$num+$_COOKIE['num'];
-    break;
-  case '/':
-    $result=$num/$_COOKIE['num'];
-    break;
-  case '-':
-    $result=$num-$_COOKIE['num'];
-    break;
-  case 'X':
-     $result=$num*$_COOKIE['num'];
-     break;
-}
+
+  switch($_COOKIE['op']){
+    case "+":
+      $result = $_COOKIE['num'] + $num;
+      break;
+    case "/":
+      $result = $_COOKIE['num'] / $num;
+      break;
+    case "-":
+      $result = $_COOKIE['num'] - $num;
+      break;
+    case "X":
+      $result = $_COOKIE['num'] * $num;
+      break;
+   }
 
 }
 ?>
