@@ -42,8 +42,8 @@ if (isset($_POST['equals'])) {
       $result = $_COOKIE['num'] * $num;
       break;
    }
-
-}
+$num=$result;
+} 
 ?>
 <html>
   <head>
