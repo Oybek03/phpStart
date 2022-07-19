@@ -1,6 +1,6 @@
 <?php
-$name = $_POST["name"];
-$firstname = $_POST["firstname"];
+$NANE = $_POST["name"];
+$FIRSTNAME = $_POST["firstname"];
 
 
 $conn = new mysqli('localhost','root','','test');
@@ -8,9 +8,12 @@ if($conn->connect_error){
   echo "$conn->connect_error";
   die("Connection Failed : ". $conn->connect_error);
 } else {
-  $stmt = $conn->prepare("insert into registration(Ism, Familya) 
+  $stmt = $conn->prepare("insert into registration(Ismm, Familya) 
   values(?, ?)");
-  $stmt->bind_param($name, $firstname);
+  // $stmt->bindparam($NAME, $FIRSTNAME);
+  $stmt->bindParam(1, $name);
+$stmt->bindParam(2, $firstname);
+
   $execval = $stmt->execute();
   echo $execval;
   echo "Registration successfully...";
