@@ -8,16 +8,16 @@ if($conn->connect_error){
   echo "$conn->connect_error";
   die("Connection Failed : ". $conn->connect_error);
 } else {
-  $stmt = $conn->prepare("insert into registration(Ismm, Familya) 
+  $STMT = $conn->prepare("insert into registration(Ismm, Familya) 
   values(?, ?)");
   // $stmt->bindparam($NAME, $FIRSTNAME);
-  $stmt->bindParam(1, $name);
-$stmt->bindParam(2, $firstname);
+  $STMT->bindParam(1, $NAME);
+$STMT->bindParam(2, $FIRSTNAME);
 
-  $execval = $stmt->execute();
-  echo $execval;
+  $EXECVAL = $STMT->execute();
+  echo $EXECVAL;
   echo "Registration successfully...";
-  $stmt->close();
-  $conn->close();
+  $STMT->close();
+  $STMT->close();
 }
 ?>
