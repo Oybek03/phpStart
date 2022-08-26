@@ -127,6 +127,7 @@ input:focus ~ .highlight {
 <body>
 <div class="container">
   
+  <h2>Google Material Design in CSS3<small>Inputs</small></h2>
   
   <form>
     
@@ -141,7 +142,7 @@ input:focus ~ .highlight {
       <input type="text" name="avtor" >
       <span class="highlight"></span>
       <span class="bar"></span>
-      <label>Phone</label>
+      <label>Email</label>
     </div>
 <input type="submit" name="s1" value="ok">
   </form>
